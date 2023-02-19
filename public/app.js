@@ -4,13 +4,12 @@ var artForm = document.querySelector("#artForm");
 var save=document.getElementById('save');
 var index = 0;
 var data=[];
-
+    
 myBtn.onclick = function(e)
 { 
     index++;
     e.preventDefault();
     var dynamicForm = myDiv.cloneNode(true);
-    // dynamicForm.id.remove();
     artForm.appendChild(dynamicForm);
     dynamicForm.id = 'contant'+index;
     var input1 =document.getElementById('contant'+index).children[0].children[1];
@@ -22,9 +21,7 @@ myBtn.onclick = function(e)
     input3.setAttribute('id', 'category'+index);
     input4.setAttribute('id', 'description'+index);
 }
-save.onclick=function(e){
-    e.preventDefault();
- 
+save.onclick=function(){
  for (let i = 0; i <=index; i++) {
     var obj={};
     obj['title'+i]=document.querySelector('#title'+i).value;
@@ -37,5 +34,4 @@ save.onclick=function(e){
  r=JSON.stringify(data);
  xhr.open("GET", "http://localhost/My/oop-crud/Controller/controllerSend.php?q="+r, true);
   xhr.send();
-
 }

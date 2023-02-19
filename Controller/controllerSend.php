@@ -10,6 +10,5 @@ for ($i=0; $i < count($q); $i++) {
     $author=$q[$i]->{'author'.$i};
     $category=$q[$i]->{'category'.$i};
     $content=$q[$i]->{'description'.$i};
-    Article::insert($title, $author, $category, $content);
-    
+    Article::insert($title, $author, $category, $content);    
 }

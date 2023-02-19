@@ -8,36 +8,34 @@
     <title>Document</title>
 </head>
 <body>
-<form class="m-auto w-75 my-5" id="artForm">
-    
-        <div class="df">
-            <div class="form-group">
-                <label for="formGroupExampleInput">Title</label>
-                <input type="text" class="form-control" id="title0" placeholder="Title">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Author</label>
-                <input type="text" class="form-control" id="author0" placeholder="Author">
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput2">Category</label>
-                <select name="" id="category0" class="form-control">
-                    <option value="">Enter your category ..</option>
-                    <option value="Mobile Development">Mobile Development</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="AI">AI</option>
-                    <option value="Data Science">Data Science</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="formGroupExampleInput">Content</label>
-                <textarea type="text" class="form-control" id="description0" placeholder="Content"></textarea>
-            </div>
-        </div> 
-    
-</form>
-    <div>
-        <a href="" type="submit" id="save" class="btn btn-primary my-3">Save</a>
+    <form class="m-auto w-75 my-5" id="artForm">     
+            <div class="df my-5">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Title</label>
+                    <input type="text" class="form-control" id="title0" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Author</label>
+                    <input type="text" class="form-control" id="author0" placeholder="Author">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Category</label>
+                    <select name="" id="category0" class="form-control">
+                        <option value="">Enter your category ..</option>
+                        <option value="Mobile Development">Mobile Development</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="AI">AI</option>
+                        <option value="Data Science">Data Science</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Content</label>
+                    <textarea type="text" class="form-control" id="description0" placeholder="Content"></textarea>
+                </div>
+            </div> 
+    </form>
+    <div class="m-auto w-75">
+        <a href="./articles.php" type="submit" id="save" class="btn btn-primary my-3">Save</a>
         <a href=""  id="mybtn" class="btn btn-success my-3">Add another Article</a>
     </div> 
 <script src="../public/app.js"></script>

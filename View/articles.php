@@ -1,4 +1,7 @@
-<?php include_once '../Controller/controllerSelect.php' ?>
+<?php include_once '../Controller/controllerSelect.php';
+$index = 1;
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +15,7 @@
     <body>
         <table class="table bg-light my-3 w-75 m-auto text-center">
             <tr>
-                <th class="p-4">id</th>
+                <th class="p-4">#</th>
                 <th class="p-4">Title</th>
                 <th class="p-4">Author</th>
                 <th class="p-4">Category</th>
@@ -23,15 +26,15 @@
             <tbody>
                 <?php foreach($rows as $row){?>
                 <tr>
-                    <td class="p-4"><?= $row['id']; ?></td>
+                    <td class="p-4"><?= $index; ?></td>
                     <td class="p-4"><?= $row['title']; ?></td>
                     <td class="p-4"><?= $row['author']; ?></td>
                     <td class="p-4"><?= $row['category']; ?></td>
                     <td class="p-4"><?= $row['content']; ?></td>
-                    <td class="p-4"> <button class="btn btn-primary">Update</button></td>
-                    <td class="p-4"> <button class="btn btn-danger">Delete</button></td>
+                    <td class="p-4"> <a href="index.php?id=<?= $row['id']; ?>" class="btn btn-primary">Edit</a></td>
+                    <td class="p-4"> <a href="../Controller/controllerDelete.php?id=<?= $row['id']; ?>" class="btn btn-danger">Delete</a></td>
                 </tr>
-                <?php } ?>
+                <?php $index++; } ?>
             </tbody>
         </table>
     </body>

@@ -1,3 +1,7 @@
+<?php 
+include_once '../Controller/controllerEdit.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +16,16 @@
             <div class="df my-5">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Title</label>
-                    <input type="text" class="form-control" id="title0" placeholder="Title">
+                    <input type="text" class="form-control" id="title0" placeholder="Title" value="<?= $row['title']??'' ?>">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Author</label>
-                    <input type="text" class="form-control" id="author0" placeholder="Author">
+                    <input type="text" class="form-control" id="author0" placeholder="Author" value="<?= $row['author']??'' ?>">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Category</label>
                     <select name="" id="category0" class="form-control">
-                        <option value="">Enter your category ..</option>
+                        <option value="<?= $row['category']; ?>">Enter your category ..</option>
                         <option value="Mobile Development">Mobile Development</option>
                         <option value="Web Development">Web Development</option>
                         <option value="AI">AI</option>
@@ -30,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Content</label>
-                    <textarea type="text" class="form-control" id="description0" placeholder="Content"></textarea>
+                    <textarea type="text" class="form-control" id="description0" placeholder="Content"><?= $row['content']??''?></textarea>
                 </div>
             </div> 
     </form>
